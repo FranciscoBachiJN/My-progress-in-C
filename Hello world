@@ -1,0 +1,7 @@
+#include<stdio.h>
+/* esto es un comentario*/
+int main()
+{
+    printf("Hola Mundo uwu\n");
+    return 0;
+}
