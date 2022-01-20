@@ -1,0 +1,14 @@
+#include<stdio.h>
+int main()
+{
+    int Input;
+    printf("Ingrese un numero, mi estimado\n");
+    scanf("%d",&Input);
+    if(Input % 2 == 0)
+    {
+        printf("El %i , Es par :D \n", Input);
+    }else{
+        printf("El %i, No es par :( \n",Input);
+    }
+    return 0;
+}
