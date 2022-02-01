@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main()
+{
+    int input;
+    printf("Ingrese una numero entero a calcular\n");
+    scanf("%d", &input);
+    while (input > 0 )
+    {
+        if (input % 2 == 0)
+        {
+            input = input / 2;
+            printf("%i\n", input);
+            continue;
+        }
+        else if (input == 1)
+        {
+            printf("bucle 1,2,4 encontrado\n");
+            break;
+        }
+        else
+        {
+          input = input * 3 + 1;
+          printf("%i\n", input);
+          continue;
+        }
+        
+        
+    }
+    printf("Calculo Finalizado\n");
+    
+}
