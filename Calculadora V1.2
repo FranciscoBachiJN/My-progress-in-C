@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <math.h>
+int main()
+{
+  while(1 == 1)
+  {
+    int Input;
+    printf("Bienvenido a Calculadora V1.2\n");
+    printf("Seleccione un modo de calculo, Factorizar(1), Ecuaciones cuadraticas(2)\n");
+    scanf("%d",&Input);
+    if(Input == 1) /* N! factorizar*/
+    {
+      int B;
+      printf("Modo Normal(1), Modo Manual(2), Tengo Un IQ Mayor Al Promedio Y Deseo Regresar Al menu anterior(3)\n");
+      scanf("%d", &Input);
+      if(Input == 1)
+      {
+        printf("Por favor ingrese el numero a factorizar\n");
+        scanf("%i",&Input);
+        B = Input;
+        B = B - 1;
+        while(1 == 1)
+        {
+         Input = Input * B;
+         if(B == 1)
+         {
+           printf(" Resultado: %i\n", Input);
+           printf("Se regresara al inicio\n");
+           break;
+         }
+         else
+         {
+           B = B - 1;
+           continue;
+         }
+        }
+      }
+      else if(Input == 2)
+      {
+        int C;
+        printf("Ingrese el numero a factorizar\n");
+        scanf("%d",&Input);
+        printf("Escriba la permutacion no puede ser 0 o un numero superior a el que se factorizara\n");
+        scanf("%d",&C);
+        B = Input;
+        B = B - 1;
+        while(1 == 1)
+        {
+          Input = Input * B;
+          if (C == 2)
+          {
+            printf("Resultado: %i\n", Input);
+            printf("Se regresara al menu anterior");
+            break;
+          }
+          else
+          {
+            C = C - 1;
+            B = B - 1;
+            continue;
+          }
+        }
+      }
+      else if(Input == 3)
+      {
+
+        break; 
+      }
+    }
+    else if (Input == 2) /* ecuaciones*/
+    {
+      double A,B,C;
+      /*while(1==1)
+      {
+        printf("Ingrese los valores de a b c, exactamente de esta manera o no calculara el programa\n");
+        scanf("%lf %lf %lf",&A,&B,&C);
+        if(A == 0)
+        {
+          printf("Bro tienes un IQ mayor al promedio y no sabes que A no puede ser 0, repetire el bucle\n");
+          continue;
+        }
+        else
+        {
+          double Elevado = pow(B,2) - 4 * A*C;
+          if(Elevado >= 0 )
+          {
+            if(Elevado == 0)
+            {
+              C = -B / (2*A);
+              printf("Resultado Easy: %.3f",C);
+            }
+            else
+            {
+              double X1,X2;
+              X1 = (-B + sqrt(Elevado)) / (2 * A);
+              X2 = (-B - sqrt(Elevado)) / (2 * A);
+              printf("La raiz semi dificil es: %.3f\n", X1);
+              printf("La raiz semi dificil es: %.3f\n", X2);
+            }
+          }
+          else
+          {
+            double Imaginario,Real;
+            Elevado = fabs(Elevado);
+            Real = -B / (2*A);
+            Imaginario = sqrt(Elevado) / (2*A);
+            printf("La raiz Harcord X1 es %.3f + %.3f", Real,Imaginario);
+            printf("La raiz Harcord X1 es %.3f - %.3f", Real,Imaginario);
+          }
+        }
+      } */
+    }
+  }
+  return 0;
+}
