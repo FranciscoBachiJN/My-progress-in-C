@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main(){
+    int n;
+    printf("Ingrese el rango a calcular\n");
+    scanf("%d",&n);
+    int Lista[n];
+    for(int X = 0, Y = 1; Y <= n; X++, Y++) // aqui relleno el array hasta el numero N de tamaño (Rango)
+    {
+        Lista[X] = Y; // X representa la posicion X a dar valor y Y el valor
+    }
+    for(int Z = 1; Z < n;Z++)
+    {
+        if(Lista[Z] == 0){} // verifica que no es 0 pq luego le da ansiedad
+        else{
+            for(int A = 1 ;A < n;A++)
+            {
+                if(Lista[A] == 0){}
+                else{
+                    if(Lista[Z] == Lista[A]){} // verifica que no Tienen el mismo valor
+                    else if(Lista[Z] % Lista[A] == 0){  // verifica que los valores Z y A divididos dan residuo 0
+                        Lista[Z] = 0;
+                    }
+                }
+            }
+        }
+    }
+
+// esto ya no es relevante puesto que es el sistema de impresion :)
+    printf("[");
+    for (int  i = 0; i < n; i++)
+    {
+        if (Lista[i] == 0){continue;}
+        else{printf("%d ",Lista[i]);}      
+    }
+    printf("]");
+}
